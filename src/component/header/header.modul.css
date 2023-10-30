@@ -1,0 +1,39 @@
+.btn-1 {
+    height: 30px;
+    width: 100px;
+    margin-left: 10px;
+    border-radius: 15px;
+  }
+  
+  .modal {
+    border-bottom: 1px solid;
+    color: blue;
+    margin-left: 1rem;
+  }
+  
+  .main {
+    width: 100%;
+    height: 176px;
+    background: #2395ff;
+    border-radius: 0px 0px 30px 30px;
+  }
+  
+  .plane {
+    height: 171.29049682617188px;
+    width: 225px;
+    left: -8px;
+    top: 162.4556884765625px;
+    /* background-image: url("../../../assets/img/pesawat.png"); */
+    background-repeat: no-repeat;
+  }
+  
+  .content {
+    width: 100%;
+    margin-left: 50% !important;
+  }
+  
+  .right {
+    margin-top: -100px;
+    padding-right: 20px;
+  }
+  

@@ -1,0 +1,143 @@
+.profilePage {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0px;
+    width: 100vw;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    background-color: #f5f6fa;
+  }
+  .content {
+    display: flex;
+    background-color: #f5f6fa;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 10px 0;
+  }
+  .profileContent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin: 50px 15px;
+  }
+  .profileFrom {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 30px;
+    padding: 20px;
+    width: 100vh;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+      rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    /* background-color: aquamarine; */
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+  }
+  .profileFrom p {
+    color: #2395ff;
+    font-weight: 500;
+    line-height: 18x;
+    letter-spacing: 0.3em;
+  }
+  
+  .titleProfile {
+    font-size: 18px;
+  }
+  .orderTitle {
+    display: flex;
+    justify-content: space-between;
+    /* background-color: aqua; */
+    width: 100%;
+  }
+  .profileUdpate {
+    display: flex;
+    width: 100%;
+    /* background-color: aquamarine; */
+    flex-wrap: wrap;
+  }
+  .contact {
+    /* background-color: rgb(255, 8, 0); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+  }
+  .biodata {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .myBookingPage {
+      font-weight: 400;
+    }
+    .content {
+      flex-wrap: nowrap;
+    }
+    .profileContent {
+      display: flex;
+      flex-direction: column;
+      width: 30%;
+      align-items: center;
+    }
+    .profileFrom {
+      display: flex;
+      flex-direction: column;
+      width: 70%;
+      font-weight: 500;
+    }
+    .titleProfile {
+      font-size: 24px;
+      font-weight: 600;
+    }
+    .profileUdpate {
+      flex-wrap: nowrap;
+      width: 100%;
+      /* background-color: red; */
+    }
+    .contact {
+      display: flex;
+      width: 50%;
+      /* background-color: aqua; */
+      align-items: start;
+    }
+    .biodata {
+      display: flex;
+      width: 50%;
+      /* background-color: aqua; */
+      align-items: start;
+    }
+  }
+  .inputProfile {
+    background-color:#f5f6fa;
+    width: 319px;
+    border: 0;
+    outline: 0;
+    border-bottom: 2px solid #d2c2ffad;
+    padding-bottom: 10px;
+    color: #9b96ab;
+    padding-left: 10px;
+    margin: 15px 0;
+    display: flex;
+  }
+  .saveProfile {
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    border: 0;
+    margin: 15px 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    cursor: pointer;
+    color: white;
+    background-color: #2395ff;
+  }
+  

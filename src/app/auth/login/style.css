@@ -1,0 +1,21 @@
+.inputLogin {
+    width: 319px;
+    border: 0;
+    outline: 0;
+    border-bottom: 2px solid #d2c2ffad;
+    padding-bottom: 10px;
+    color: #9b96ab;
+    padding-left: 10px;
+    margin: 15px 0;
+  }
+  .loginbtn {
+    width: 319px;
+    height: 57px;
+    border-radius: 10px;
+    border: 0;
+    margin: 15px 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    cursor: pointer;
+  }
