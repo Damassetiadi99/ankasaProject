@@ -2,12 +2,14 @@
 import React, { useEffect, useState } from "react";
 import Footer from "@/component/footer/footer";
 import NavbarComponent from "@/component/header/index";
-import ProfileCard from "@/component/profilCard/index";
-import styles from "./profile.module.css";
+import ProfileCard from "@/component/profileCard/index";
+import styles from "./Profile.module.css";
+import { useRouter } from "next/navigation";
 
 const Profile = (props) => {
   const [profileData, setProfileData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
+  const router = useRouter()
 
   useEffect(() => {
     // Mengambil token dari localStorage
@@ -37,6 +39,7 @@ const Profile = (props) => {
     } else {
       // Handle jika token tidak tersedia
       console.error("Token not found in localStorage");
+      router.push("/landing");
       setIsLoading(false);
     }
   }, []);

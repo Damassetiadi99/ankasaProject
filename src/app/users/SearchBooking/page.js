@@ -1,6 +1,6 @@
 'use client';
 import { useState, useEffect, useReducer } from 'react';
-import { useRouter } from 'next/router'; // Import useRouter
+import { useRouter } from 'next/navigation'; // Import useRouter
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
 import axios from "axios";
@@ -13,51 +13,51 @@ import HeaderSearch from "@/component/header/search";
 const SearchBooking = (props) => {
   const [data, setData] = useState([]);
   const [selected, setSelected] = useState(null);
-  // const router = useRouter(); // Initialize useRouter
+  const router = useRouter(); // Initialize useRouter
 
-  const initialState = {
-    ticket: [],
-    id: "",
-    isLoading: false,
-  };
-  function reducer(state = initialState, action) {
-    switch (action.type) {
-      case "GET_TICKET_ID":
-        return {
-          ...state,
-          id: action.payload,
-        };
-      default:
-        return state;
-    }
-  }
-  const [dispatch] = useReducer(reducer, {});
+  // const initialState = {
+  //   ticket: [],
+  //   id: "",
+  //   isLoading: false,
+  // };
+  // function reducer(state = initialState, action) {
+  //   switch (action.type) {
+  //     case "GET_TICKET_ID":
+  //       return {
+  //         ...state,
+  //         id: action.payload,
+  //       };
+  //     default:
+  //       return state;
+  //   }
+  // }
+  // const [dispatch] = useReducer(reducer, {});
 
   const handleClickTiket = (id) => {
-    // router.push(`/?id=${id}`);
+    router.push(`/users/SearchBooking/${id}`);
   };
 
-  useEffect(() => {
-    getData();
-  }, []);
+  // useEffect(() => {
+  //   getData();
+  // }, []);
 
-  // search filter
-  // const queryTransit = router.query.transit || "";
-  // const queryFacilities = router.query.facilities || "";
-  // const queryDeparture = router.query.departure || "";
-  // const queryArrive = router.query.arrive || "";
-  // const queryAirlines = router.query.airlines || "";
-  // const queryMinPrice = router.query.minPrice || "";
-  // const queryMaxPrice = router.query.maxPrice || "";
-  // const [transit, setTransit] = useState(queryTransit);
-  // const [facilities, setFacilities] = useState(queryFacilities);
-  // const [departure, setDeparture] = useState(queryDeparture);
-  // const [arrive, setArrive] = useState(queryArrive);
-  // const [airline, setAirline] = useState(queryAirlines);
-  // const [value, setValue] = useState([0, 100]);
-  // const [minPrice, setminPrice] = useState(queryMinPrice);
-  // const [maxPrice, setMaxPrice] = useState(queryMaxPrice);
-  // const [isFilter, setIsFilter] = useState(false);
+  //search filter
+  const queryTransit = router?.query?.transit || "";
+  const queryFacilities = router?.query?.facilities || "";
+  const queryDeparture = router?.query?.departure || "";
+  const queryArrive = router?.query?.arrive || "";
+  const queryAirlines = router?.query?.airlines || "";
+  const queryMinPrice = router?.query?.minPrice || "";
+  const queryMaxPrice = router?.query?.maxPrice || "";
+  const [transit, setTransit] = useState(queryTransit);
+  const [facilities, setFacilities] = useState(queryFacilities);
+  const [departure, setDeparture] = useState(queryDeparture);
+  const [arrive, setArrive] = useState(queryArrive);
+  const [airline, setAirline] = useState(queryAirlines);
+  const [value, setValue] = useState([0, 100]);
+  const [minPrice, setminPrice] = useState(queryMinPrice);
+  const [maxPrice, setMaxPrice] = useState(queryMaxPrice);
+  const [isFilter, setIsFilter] = useState(false);
 
   // console.log(transit);
 
@@ -91,18 +91,10 @@ const SearchBooking = (props) => {
   //end of search
   let url = `https://easy-lime-seal-toga.cyclic.app/airlines/flight`;
   const getData = (
-    transit = "",
-    facilities = "",
-    departure = "",
-    arrive = "",
-    airline = "",
-    minPrice = "",
-    maxPrice = ""
   ) => {
     axios
       .get(
         url
-        // `https://flyer-be-production.up.railway.app/ticket?transit=${transit}&facilities=${facilities}&departure=${departure}&arrive=${arrive}&airline=${airline}&min_price=${minPrice}&max_price=${maxPrice}`
       )
       .then((res) => {
         console.log("get data success");
@@ -159,10 +151,12 @@ const SearchBooking = (props) => {
   return (
     <div className="p-4">
       <nav>
-        <NavbarComponent
+        <NavbarComponent />
+        <div
           id="search"
           search={(e) => setSearch(e.target.value.toLowerCase())}
-        />
+              >
+        </div>
       </nav>
       <main>
         <div className="row">
@@ -687,41 +681,13 @@ const SearchBooking = (props) => {
               </select>
             </div>
             <div>
-              <div className="d-flex flex-row gap-5 my-3 justify-content-end">
-                <div>
-                  <button
-                    style={{
-                      borderRadius: "8px",
-                      backgroundColor: "white",
-                      color: "#2395FF",
-                    }}
-                    disabled={page === 1}
-                    onClick={previousPage}
-                  >
-                    Prev
-                  </button>
-                </div>
-
-                <div>
-                  <button
-                    style={{
-                      borderRadius: "8px",
-                      backgroundColor: "white",
-                    }}
-                    disabled={data <= 0}
-                    onClick={nextPage}
-                  >
-                    Next
-                  </button>
-                </div>
-              </div>
               {data.length
                 ? data
                     .sort((a, b) => (a.item > b.item ? 1 : -1))
                     .map((item, i) => (
                       <div className="card mb-3" key={i.id}>
                         <Ticket
-                          key={item.from.id}
+                          facilities={item.facilities}
                           logo={item.photo}
                           airlines_names={item.name}
                           departure_city={item.from.location}
@@ -731,13 +697,14 @@ const SearchBooking = (props) => {
                           departure={item.takeoff}
                           arrive={item.landing}
                           price={item.price}
+                          interval={item.interval_time}
                           transit={item.transit}
-                          onClick={
-                            item.id == selected
-                              ? () => setSelected(null)
-                              : () => (setSelected(item.id), select(item))
-                          }
-                          // onClick={() => handleClickTiket(item.id)}
+                          // onClick={
+                          //   item.id == selected
+                          //     ? () => setSelected(null)
+                          //     : () => (setSelected(item.id), select(item))
+                          // }
+                          onClick={() => handleClickTiket(item.code)}
                           // onClick={`/DetailFlight?id=${item.id}`}
                         />
                       </div>

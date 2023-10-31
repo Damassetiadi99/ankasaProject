@@ -95,7 +95,7 @@ function NavbarComponent() {
                 {/* <MydModalWithGrid /> */}
               </button>
               <Link
-                href="/MyBooking"
+                href="/users/mybooking"
                 style={{ textDecoration: "none", color: "black" }}
                 className="px-lg-5 mt-lg-1"
               >
