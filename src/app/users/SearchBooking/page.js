@@ -1,10 +1,10 @@
-'use client';
-import { useState, useEffect, useReducer } from 'react';
-import { useRouter } from 'next/navigation'; // Import useRouter
+"use client";
+import { useState, useEffect, useReducer } from "react";
+import { useRouter } from "next/navigation"; // Import useRouter
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
 import axios from "axios";
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
 import NavbarComponent from "@/component/header/index";
 import Footer from "@/component/footer/footer";
 import Ticket from "@/component/Ticket/index";
@@ -65,7 +65,7 @@ const SearchBooking = (props) => {
     e.preventDefault();
     setIsFilter(true);
     router.push({
-      pathname: '/',
+      pathname: "/",
       query: {
         transit,
         facilities,
@@ -78,24 +78,34 @@ const SearchBooking = (props) => {
     });
     // router.push(`?transit=${transit}&facilities=${facilities}&departure=${departure}&arrive=${arrive}&airline=${airline}&minPrice=${minPrice}&maxPrice=${maxPrice}`);
   };
+  // const handleChange = (event, newValue) => {
+  //   const values = [];
+  //   newValue.map((value) => {
+  //     values.push(value * 100);
+  //   });
+  //   setValue(newValue);
+  //   setminPrice(values[0]);
+  //   setMaxPrice(values[1]);
+  // };
   const handleChange = (event, newValue) => {
-    const values = [];
-    newValue.map((value) => {
-      values.push(value * 100);
-    });
-    setValue(newValue);
-    setminPrice(values[0]);
-    setMaxPrice(values[1]);
+    if (Array.isArray(newValue)) {
+      const values = newValue.map((value) => {
+        return value * 100;
+      });
+      setValue(newValue);
+      setminPrice(values[0]);
+      setMaxPrice(values[1]);
+    } else {
+      // Penanganan kesalahan jika newValue bukan array
+      console.error("newValue is not an array.");
+    }
   };
 
   //end of search
-  let url = `https://easy-lime-seal-toga.cyclic.app/airlines/flight`;
-  const getData = (
-  ) => {
+  let url = "https://easy-lime-seal-toga.cyclic.app/airlines/flight";
+  const getData = () => {
     axios
-      .get(
-        url
-      )
+      .get(url)
       .then((res) => {
         console.log("get data success");
         console.log(res.data.data);
@@ -127,7 +137,7 @@ const SearchBooking = (props) => {
     } else {
       url = `${url}&limit=8`;
     }
-    if (page !== "1") {
+    if (page !== "1") { 
       url = `${url}&page=${page}`;
     }
     if (search !== "") {
@@ -155,8 +165,7 @@ const SearchBooking = (props) => {
         <div
           id="search"
           search={(e) => setSearch(e.target.value.toLowerCase())}
-              >
-        </div>
+        ></div>
       </nav>
       <main>
         <div className="row">
@@ -589,10 +598,19 @@ const SearchBooking = (props) => {
                         </li>
                         <div>
                           <Box>
-                            <Slider
+                            {/* <Slider
                               getAriaLabel={() => "Temperature range"}
                               // value={value}
                               onChange={handleChange}
+                              valueLabelDisplay="auto"
+                            /> */}
+                            <Slider
+                              getAriaLabel={() => "Temperature range"}
+                              onChange={(event, newValue) => {
+                                if (Array.isArray(newValue)) {
+                                  handleChange(event, newValue);
+                                }
+                              }}
                               valueLabelDisplay="auto"
                             />
                           </Box>

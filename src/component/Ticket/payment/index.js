@@ -2,6 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { useRouter, useParams } from 'next/navigation';
+import Image from 'next/image';
 
 const CardPayment = () => {
   const params = useParams();
@@ -25,7 +26,7 @@ const CardPayment = () => {
                   <img src="/paypal.png" alt="Paypal" className="img-fluid mb-2" style={{ width: '20px', height: '20px' }} />
                   <div className="d-flex gap-2">
                     <img src="/MasterCard.png" alt="Master Card" className="img-fluid mb-2" style={{ width: '20px', height: '20px' }} />
-                    <img src="/../../public/img/Visa.png" alt="Visa" className="img-fluid mb-2" style={{ width: '20px', height: '20px' }} />
+                    <img src="/Visa.png" alt="Visa" className="img-fluid mb-2" style={{ width: '20px', height: '20px' }} />
                   </div>
                 </div>
               </div>
@@ -72,7 +73,7 @@ const CardPayment = () => {
                   <label className="fw-bold d-flex justify-content-end mt-3"> $ 98</label>
                 </div>
               </div>
-              <Link href={`/users/mybooking/bookingpass/${code}`}>
+              <Link href={`/users/mybooking/bookingpass`}>
                 {' '}
                 <button className="btn btn-primary mt-5 w-100">Pay Now</button>
               </Link>

@@ -2,7 +2,7 @@
 import React from 'react';
 import NavbarComponent from '@/component/header';
 import Footer from '@/component/footer/footer';
-import ProfileCard from '@/component/profilCard';
+import ProfileCard from '@/component/profileCard';
 import CardBookingTiketStatus from '@/component/Ticket/bookingTicket/page';
 import { useState , useEffect } from 'react';
 import { useRouter } from 'next/navigation';
