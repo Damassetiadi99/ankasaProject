@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { Accordion } from "react-bootstrap";
 import "./style.css";
+import Link from "next/link";
 
 function CardBookingTiketStatus() {
   const [Flight, setFlight] = useState([]);
@@ -105,7 +106,12 @@ function CardBookingTiketStatus() {
               <Accordion.Item eventKey="0">
                 <Accordion.Header>View Details</Accordion.Header>
                 <Accordion.Body>
-                  <p>View Details</p>
+                  <Link
+                 href={
+                booking.status.id === 1
+                  ? `/users/mybooking/payment/${booking.code}`
+                  : `/users/mybooking/bookingpass/${booking.code}`
+              }>View Details</Link>
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>
