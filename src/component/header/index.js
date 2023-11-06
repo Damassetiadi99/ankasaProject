@@ -12,6 +12,7 @@ import MyVerticallyCenteredModal from "@/component/modal/modalNotif";
 // import { detailProfile } from "../../../Config/redux/actions/profile";
 
 function NavbarComponent() {
+  
   // { search, submitSearch, id }
   const token = localStorage.getItem("Ankasa");
   // const { profile } = useSelector((state) => state.profile);

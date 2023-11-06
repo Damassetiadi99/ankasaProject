@@ -3,10 +3,43 @@ import React from 'react';
 import Link from 'next/link';
 import { useRouter, useParams } from 'next/navigation';
 import Image from 'next/image';
+import { useState } from 'react';
 
 const CardPayment = () => {
+  const router =useRouter()
   const params = useParams();
   const code = params.code;
+  const [passenger, setPassenger] = useState({
+    statusId: 2,
+
+  });
+  
+  const handlePut = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await fetch(
+        `https://easy-lime-seal-toga.cyclic.app/booking/status/${code}`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(passenger),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      const data = await response.json();
+      router.push(`/users/mybooking/bookingpass/${code}`);
+
+      return data;
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
 
   return (
     <div>
@@ -75,7 +108,8 @@ const CardPayment = () => {
               </div>
               <Link href={`/users/mybooking/bookingpass`}>
                 {' '}
-                <button className="btn btn-primary mt-5 w-100">Pay Now</button>
+                <button className="btn btn-primary mt-5 w-100"
+                onClick={handlePut}>Pay Now</button>
               </Link>
             </div>
           </div>

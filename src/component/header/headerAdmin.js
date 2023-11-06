@@ -49,7 +49,7 @@ function NavbarComponentAdmin({ search, submitSearch, id }) {
                 className="input"
                 id={id}
                 onChange={search}
-                placeholder="Where you want to go?"
+                placeholder="Where you want to go now ?"
                 aria-label="Search"
                 name="search"
                 required

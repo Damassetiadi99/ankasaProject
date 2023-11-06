@@ -9,57 +9,39 @@ import NavbarComponent from "@/component/header/index";
 import Footer from "@/component/footer/footer";
 import Ticket from "@/component/Ticket/index";
 import HeaderSearch from "@/component/header/search";
+import Link from "next/link";
+import { Button, Navbar } from "react-bootstrap";
+
 
 const SearchBooking = (props) => {
   const [data, setData] = useState([]);
   const [selected, setSelected] = useState(null);
   const router = useRouter(); // Initialize useRouter
+  const token = localStorage.getItem("Ankasa");
+  const [search, setSearch] = useState("");
 
-  // const initialState = {
-  //   ticket: [],
-  //   id: "",
-  //   isLoading: false,
-  // };
-  // function reducer(state = initialState, action) {
-  //   switch (action.type) {
-  //     case "GET_TICKET_ID":
-  //       return {
-  //         ...state,
-  //         id: action.payload,
-  //       };
-  //     default:
-  //       return state;
-  //   }
-  // }
-  // const [dispatch] = useReducer(reducer, {});
+
+  const Searching = (e) => {
+    setSearch(e.target.value);
+  };
+
+  console.log(data)
+  const selectedData = () => {
+    if (data) {
+    return data
+      .filter((item) => item.name.includes(search))
+      // .filter((item) => !selectedCategory || item.category == selectedCategory);
+  } else {
+    return [];
+  }
+  };
+console.log(selectedData())
 
   const handleClickTiket = (id) => {
     router.push(`/users/SearchBooking/${id}`);
   };
 
-  // useEffect(() => {
-  //   getData();
-  // }, []);
-
-  //search filter
-  const queryTransit = router?.query?.transit || "";
-  const queryFacilities = router?.query?.facilities || "";
-  const queryDeparture = router?.query?.departure || "";
-  const queryArrive = router?.query?.arrive || "";
-  const queryAirlines = router?.query?.airlines || "";
-  const queryMinPrice = router?.query?.minPrice || "";
-  const queryMaxPrice = router?.query?.maxPrice || "";
-  const [transit, setTransit] = useState(queryTransit);
-  const [facilities, setFacilities] = useState(queryFacilities);
-  const [departure, setDeparture] = useState(queryDeparture);
-  const [arrive, setArrive] = useState(queryArrive);
-  const [airline, setAirline] = useState(queryAirlines);
-  const [value, setValue] = useState([0, 100]);
-  const [minPrice, setminPrice] = useState(queryMinPrice);
-  const [maxPrice, setMaxPrice] = useState(queryMaxPrice);
-  const [isFilter, setIsFilter] = useState(false);
-
-  // console.log(transit);
+  
 
   const searchfilter = (e) => {
     e.preventDefault();
@@ -78,15 +60,7 @@ const SearchBooking = (props) => {
     });
     // router.push(`?transit=${transit}&facilities=${facilities}&departure=${departure}&arrive=${arrive}&airline=${airline}&minPrice=${minPrice}&maxPrice=${maxPrice}`);
   };
-  // const handleChange = (event, newValue) => {
-  //   const values = [];
-  //   newValue.map((value) => {
-  //     values.push(value * 100);
-  //   });
-  //   setValue(newValue);
-  //   setminPrice(values[0]);
-  //   setMaxPrice(values[1]);
-  // };
+ 
   const handleChange = (event, newValue) => {
     if (Array.isArray(newValue)) {
       const values = newValue.map((value) => {
@@ -127,7 +101,6 @@ const SearchBooking = (props) => {
   const [setSortState] = useState("");
 
   //pagination
-  const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
   const [limit] = useState(8);
 
@@ -137,7 +110,7 @@ const SearchBooking = (props) => {
     } else {
       url = `${url}&limit=8`;
     }
-    if (page !== "1") { 
+    if (page !== "1") {
       url = `${url}&page=${page}`;
     }
     if (search !== "") {
@@ -160,8 +133,130 @@ const SearchBooking = (props) => {
   //pagination
   return (
     <div className="p-4">
+      {/* navbar */}
       <nav>
-        <NavbarComponent />
+      <div className=" bg-white">
+      <div className="row d-flex justify-content-between">
+        <div className="col-lg-2 px-3 d-flex align-content-center flex-wrap justify-content-start">
+          <img
+            src='/img/fly.png'
+            alt="logo"
+            style={{ width: "30px", marginRight: "10px" }}
+          />
+          <Link
+            href="/"
+            style={{
+              color: "black",
+              fontWeight: "bold",
+              textDecoration: "none",
+            }}
+          >
+            <h5>Ankasa</h5>
+          </Link>
+        </div>
+        <div className="col-lg-4 d-flex align-content-center flex-wrap">
+          {/* <Form.Control
+            className=""
+            type="search"
+            placeholder="Where you want to go?"
+            aria-label="Search"
+            onChange={search}
+            onSubmit={submitSearch}
+          />
+           */}
+          <form >
+          {/* onSubmit={submitSearch} */}
+            <div className="field has-addons d-flex input-group">
+              <div className="control is-expanded px-3 input-group-text">
+                <button
+                  type="submit"
+                  className="button is-info form-control-plaintext"
+                  style={{ borderRadius: "10px" }}
+                >
+                  <img
+                    src="https://www.citypng.com/public/uploads/preview/download-blue-search-icon-button-png-11640084027s0fkuhz2lb.png"
+                    alt="asas"
+                    style={{
+                      backgroundColor: "white",
+                      width: "20px",
+                    }}
+                  />
+                </button>
+                <input
+                  type="search"
+                  className=""
+                  value={search}
+                  onChange={Searching}
+                  placeholder="Where you want to go?"
+                  aria-label="Search"
+                  name="search"
+                  required
+                  style={{ borderStyle: "none"}}
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+        <div className="col-lg-6 d-flex justify-content-end px-5">
+          <Navbar expand="lg" className="">
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse>
+              <button className="btn">
+                {/* <MydModalWithGrid /> */}
+              </button>
+              <Link
+                href="/users/mybooking"
+                style={{ textDecoration: "none", color: "black" }}
+                className="px-lg-5 mt-lg-1"
+              >
+                <h6> My Booking</h6>
+              </Link>
+              {token ? (
+                <div className=" px-lg-4 d-flex justify-content-end">
+                  {/* <MyModalTicket /> */}
+                  <MyVerticallyCenteredModal />
+                  <Button variant="white" style={{ width: "4rem" }}>
+                    <Link href="/profile">
+                      <img
+                        src={profile.photo}
+                        alt=""
+                        style={{
+                          verticalAlign: "middle",
+                          height: "40px",
+                          borderRadius: "50%",
+                          marginLeft: "-5px",
+                        }}
+                      />
+                    </Link>
+                  </Button>
+                </div>
+              ) : (
+                <div className="d-lg-flex d-flex justify-content-end">
+                  <Link href="/auth/login">
+                    <Button
+                      id="responsive-navbar-nav"
+                      className="btn-1 px-lg-4"
+                      variant="primary"
+                    >
+                      Login
+                    </Button>
+                  </Link>
+
+                  <Link href="/auth/register">
+                    <Button
+                      className="btn-1  px-lg-4"
+                      variant="outline-primary"
+                    >
+                      Sign Up
+                    </Button>
+                  </Link>
+                </div>
+              )}
+            </Navbar.Collapse>
+          </Navbar>
+        </div>
+      </div>
+    </div>
         <div
           id="search"
           search={(e) => setSearch(e.target.value.toLowerCase())}
@@ -699,8 +794,9 @@ const SearchBooking = (props) => {
               </select>
             </div>
             <div>
-              {data.length
-                ? data
+              {selectedData().length
+                ? selectedData()
+              
                     .sort((a, b) => (a.item > b.item ? 1 : -1))
                     .map((item, i) => (
                       <div className="card mb-3" key={i.id}>
@@ -727,6 +823,7 @@ const SearchBooking = (props) => {
                         />
                       </div>
                     ))
+                  
                 : "Ticket not found"}
             </div>
           </div>
