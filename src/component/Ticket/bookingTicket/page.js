@@ -80,7 +80,7 @@ function CardBookingTiketStatus() {
           </h6>
           <div className="d-flex gap-4 px-3">
             <h3 className="fw-bolder">({booking.ticket.from?.code})</h3>
-            <img src="/img/plan.png" alt="" height={20} />
+            <image src="/img/plan.png" alt="" height={20} />
             <h3 className="fw-bolder">({booking.ticket.to?.code})</h3>
           </div>
           <p className="px-3" style={{ color: "#979797" }}>

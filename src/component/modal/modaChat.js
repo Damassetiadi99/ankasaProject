@@ -25,7 +25,7 @@ function MyModalTicket(props) {
                     <div className="card-body ">
                         <div className='d-flex justify-content-between'>
                             <div className='d-flex'>
-                                <img src='/img/p1.png' alt='' />
+                                <image src='/img/p1.png' alt='' />
                                 <div className='ms-3 col-12'>
                                     <h6 classname='bg-'>Soham Henry</h6>
                                     <p>Me : Hallo!</p>
@@ -34,7 +34,8 @@ function MyModalTicket(props) {
                             <div className='text-end'>
                                 <p>yesterday</p>
                                 <div className=''>
-                                    <img src='/img/g10.png' alt='' />
+                                    <image
+                                 src='/img/g10.png' alt='' />
                                 </div>
 
                             </div>
@@ -45,7 +46,7 @@ function MyModalTicket(props) {
                     <div className="card-body ">
                         <div className='d-flex justify-content-between'>
                             <div className='d-flex'>
-                                <img src='/img/p1.png' alt='' />
+                                <image src='/img/p1.png' alt='' />
                                 <div className='ms-3 col-12'>
                                     <h6 classname='bg-'>Soham Henry</h6>
                                     <p>Me : Hallo!</p>
@@ -54,7 +55,7 @@ function MyModalTicket(props) {
                             <div className='text-end'>
                                 <p>yesterday</p>
                                 <div className=''>
-                                    <img src='/img/g10.png' alt='' />
+                                    <image src='/img/g10.png' alt='' />
                                 </div>
 
                             </div>
@@ -64,7 +65,7 @@ function MyModalTicket(props) {
                     <div className="card-body ">
                         <div className='d-flex justify-content-between'>
                             <div className='d-flex'>
-                                <img src='/img/p1.png' alt='' />
+                                <image src='/img/p1.png' alt='' />
                                 <div className='ms-3 col-12'>
                                     <h6 classname='bg-'>Soham Henry</h6>
                                     <p>Me : Hallo!</p>
@@ -73,7 +74,7 @@ function MyModalTicket(props) {
                             <div className='text-end'>
                                 <p>yesterday</p>
                                 <div className=''>
-                                    <img src='/img/g10.png' alt='' />
+                                    <image src='/img/g10.png' alt='' />
                                 </div>
 
                             </div>
@@ -95,7 +96,7 @@ function ModalChat() {
     return (
         <>
             <Button variant="white" onClick={() => setModalShow(true)}>
-                <img src='/img/gr5.png' />
+                <image src='/img/gr5.png' />
             </Button>
             <MyModalTicket show={modalShow} onHide={() => setModalShow(false)} />
         </>

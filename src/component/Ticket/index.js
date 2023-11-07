@@ -37,7 +37,7 @@ const Ticket = ({
     <div className={`${style.main} card mb-4 `}>
       <div className="card-body">
         <div className="d-flex">
-          <img
+          <image
             className={`${style.planeIcon} m-3`}
             src={logo}
             alt="maskapai-icon"
@@ -52,7 +52,8 @@ const Ticket = ({
             <p className="text-muted fs-6 fw-light">{departure}</p>
           </div>
           <div className="flex-column ms-3 me-3">
-            <img
+            <image
+
               src={
                 "https://res.cloudinary.com/dnu5su7ft/image/upload/v1672063590/plane.png"
               }
@@ -70,21 +71,24 @@ const Ticket = ({
             <p className="text-muted fw-light"> ({transit} transit)</p>
           </div>
           <div className="justify-content-between p-3 ms-3">
-            <img
+            <image
+
               src={
                 "https://res.cloudinary.com/dnu5su7ft/image/upload/v1672061589/koper.png"
               }
               alt="luggage-logo"
               className="ms-3 me-3"
             />
-            <img
+            <image
+
               src={
                 "https://res.cloudinary.com/dnu5su7ft/image/upload/v1672061634/burger.png"
               }
               alt="food-logo"
               className="ms-3 me-3"
             />
-            <img
+            <image
+
               src={
                 "https://res.cloudinary.com/dnu5su7ft/image/upload/v1672061667/wifi.png"
               }

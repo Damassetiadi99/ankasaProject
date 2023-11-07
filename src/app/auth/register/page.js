@@ -56,12 +56,12 @@ export default function Register() {
     <div className="row" style={{ height: '100vh' }}>
       <div className="col-md-6 bg-primary d-flex align-items-center justify-content-center">
         {/* Gambar atau konten di sisi kiri */}
-        <img src="/gambar-login.png" alt="Gambar Login" className="img-fluid" />
+        <image src="/gambar-login.png" alt="Gambar Login" className="image-fluid" />
       </div>
       <div className="col-md-6 d-flex flex-column align-items-center">
         {/* Form pendaftaran di sisi kanan */}
         <div className="pt-5 pb-5 mb-5 col-md-5 ml-auto">
-          <img src="/icon auth.png" alt="Gambar Login" className="img-fluid" />
+          <image src="/icon auth.png" alt="Gambar Login" className="image-fluid" />
         </div>
         <h2 className="col-md-5 ml-auto mb-5 fw-bold">Register</h2>
         <form onSubmit={handleRegister}>

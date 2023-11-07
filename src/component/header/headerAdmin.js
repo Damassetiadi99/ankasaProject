@@ -62,7 +62,7 @@ function NavbarComponentAdmin({ search, submitSearch, id }) {
                 className="button is-info"
                 style={{ borderRadius: "10px" }}
               >
-                <img
+                <image
                   src="https://e7.pngegg.com/pngimages/608/913/png-clipart-computer-icons-google-search-symbol-mobile-search-search-for-miscellaneous-logo-thumbnail.png"
                   alt="search icon"
                   style={{
@@ -83,7 +83,7 @@ function NavbarComponentAdmin({ search, submitSearch, id }) {
               <div className="px-lg-4 d-flex justify-content-end align-items-center">
                 <Button variant="white" style={{ width: "4rem" }}>
                   <Link to="/profile">
-                    <img
+                    <image
                       src={profile.photo}
                       alt=""
                       style={{

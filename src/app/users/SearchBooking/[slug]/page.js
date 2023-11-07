@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { Row, Col, Container, Form, Accordion, Button } from "react-bootstrap";
+import { Row, Col, Container, Form, Button } from "react-bootstrap";
 import Footer from "@/component/footer/footer";
 import NavbarComponent from "@/component/header/index";
 import { useRouter } from "next/navigation";

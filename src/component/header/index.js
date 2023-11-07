@@ -29,7 +29,7 @@ function NavbarComponent() {
     <div className=" bg-white">
       <div className="row d-flex justify-content-between">
         <div className="col-lg-2 px-3 d-flex align-content-center flex-wrap justify-content-start">
-          <img
+          <image
             src='/img/fly.png'
             alt="logo"
             style={{ width: "30px", marginRight: "10px" }}
@@ -64,8 +64,8 @@ function NavbarComponent() {
                   className="button is-info form-control-plaintext"
                   style={{ borderRadius: "10px" }}
                 >
-                  <img
-                    src="https://www.citypng.com/public/uploads/preview/download-blue-search-icon-button-png-11640084027s0fkuhz2lb.png"
+                  <image
+                                      src="https://www.citypng.com/public/uploads/preview/download-blue-search-icon-button-png-11640084027s0fkuhz2lb.png"
                     alt="asas"
                     style={{
                       backgroundColor: "white",
@@ -108,7 +108,7 @@ function NavbarComponent() {
                   <MyVerticallyCenteredModal />
                   <Button variant="white" style={{ width: "4rem" }}>
                     <Link href="/profile">
-                      <img
+                      <image
                         src={profile.photo}
                         alt=""
                         style={{

@@ -137,7 +137,7 @@ console.log(selectedData())
       <div className=" bg-white">
       <div className="row d-flex justify-content-between">
         <div className="col-lg-2 px-3 d-flex align-content-center flex-wrap justify-content-start">
-          <img
+          <image
             src='/img/fly.png'
             alt="logo"
             style={{ width: "30px", marginRight: "10px" }}
@@ -172,7 +172,7 @@ console.log(selectedData())
                   className="button is-info form-control-plaintext"
                   style={{ borderRadius: "10px" }}
                 >
-                  <img
+                  <image
                     src="https://www.citypng.com/public/uploads/preview/download-blue-search-icon-button-png-11640084027s0fkuhz2lb.png"
                     alt="asas"
                     style={{
@@ -212,11 +212,9 @@ console.log(selectedData())
               </Link>
               {token ? (
                 <div className=" px-lg-4 d-flex justify-content-end">
-                  {/* <MyModalTicket /> */}
-                  <MyVerticallyCenteredModal />
                   <Button variant="white" style={{ width: "4rem" }}>
                     <Link href="/profile">
-                      <img
+                      <image
                         src={profile.photo}
                         alt=""
                         style={{

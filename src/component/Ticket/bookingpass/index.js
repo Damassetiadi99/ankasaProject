@@ -74,11 +74,11 @@ const PaymentBookingPass = () => {
       <div className="row bg-light">
         <div className="col-md-7 border rounded bg-white  mt-5">
           <div className=" d-flex ">
-            <img className="img-fluid " src={Flight?.ticket.airline.photo} alt="Photo Airline" style={{ maxwidth: '40px', height: '60px', objectFit: 'cover', marginLeft: '30px' }} />
+            <image className="img-fluid " src={Flight?.ticket.airline.photo} alt="Photo Airline" style={{ maxwidth: '40px', height: '60px', objectFit: 'cover', marginLeft: '30px' }} />
             <h5 className="fw-bold mt-4" style={{ marginLeft: '30px' }}>
               {Flight?.ticket.from.code}
             </h5>
-            <img className="img-fluid mt-4" src="/Vector.svg" alt=" Vector" style={{ marginLeft: '20px' }} />
+            <image className="img-fluid mt-4" src="/Vector.svg" alt=" Vector" style={{ marginLeft: '20px' }} />
             <h5 className="fw-bold mt-4" style={{ marginLeft: '30px' }}>
               {Flight?.ticket.to.code}
             </h5>
