@@ -35,7 +35,7 @@ export default function ForgotPaswword() {
                 Send
               </button>
             </form>
-          <p className="mt-4 mb-4">you'll get message soon on your email</p>
+          <p className="mt-4 mb-4"> you will get message soon on your email</p>
         </div>
       </div>
     </div>

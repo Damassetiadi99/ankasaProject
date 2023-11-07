@@ -35,7 +35,7 @@ export default function Register() {
         Swal.fire({
           title: "Register",
           text: "Register Successfully!",
-          icon: "success",
+          icon: "success"
         })
         // alert('Registration successful');
         router.push('/auth/login');
