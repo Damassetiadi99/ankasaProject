@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useReducer } from "react";
+import { useState, useEffect, useReducer,useRef } from "react";
 import { useRouter } from "next/navigation"; // Import useRouter
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
@@ -176,7 +176,7 @@ console.log(selectedData())
                     src="https://www.citypng.com/public/uploads/preview/download-blue-search-icon-button-png-11640084027s0fkuhz2lb.png"
                     alt="asas"
                     style={{
-                      backgroundColor: "white",
+                      backgroundColor: "blue",
                       width: "20px",
                     }}
                   />

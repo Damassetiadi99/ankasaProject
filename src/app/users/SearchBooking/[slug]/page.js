@@ -44,7 +44,7 @@ function DetailFlightPage(props) {
       });
   };
   useEffect(() => {
-    getData(url);
+    getData();
   }, []);
 
   const handleSubmit = async () => {

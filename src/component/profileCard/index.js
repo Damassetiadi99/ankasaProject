@@ -9,7 +9,7 @@ import Swal from "sweetalert2";
 import Input from "@/component/input/index";
 import Imag from "../../../public/img/index";
 
-const profileCard = ({
+const ProfileCard = ({
   name,
   city,
   address,
@@ -105,4 +105,4 @@ const profileCard = ({
   );
 };
 
-export default profileCard;
+export default ProfileCard;
