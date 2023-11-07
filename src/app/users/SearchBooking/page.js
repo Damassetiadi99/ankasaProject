@@ -5,7 +5,6 @@ import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
 import axios from "axios";
 import Swal from "sweetalert2";
-import NavbarComponent from "@/component/header/index";
 import Footer from "@/component/footer/footer";
 import Ticket from "@/component/Ticket/index";
 import HeaderSearch from "@/component/header/search";

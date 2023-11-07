@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./cardStyleTicket.module.css";
+import style from "./cardStyleTicket.Module.css";
 
 const Ticket = ({
   logo,

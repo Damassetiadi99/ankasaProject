@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Footer from "@/component/footer/footer";
 import NavbarComponent from "@/component/header/index";
 import ProfileCard from "@/component/profileCard/index";
-import styles from "./Profile.module.css";
+import styles from "./profile.module.css";
 import { useRouter } from "next/navigation";
 
 const Profile = (props) => {
