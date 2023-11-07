@@ -97,7 +97,7 @@ function DetailFlightPage(props) {
         }}
       >
         <div className="text" style={{ height: "1rem" }}>
-          <img
+          <image
             src="/img/fly.png"
             alt=""
             height={100}
@@ -208,7 +208,7 @@ function DetailFlightPage(props) {
                     borderRadius: "5px",
                   }}
                 >
-                  <img src="/img/atten.png" alt="" />
+                  <image src="/img/atten.png" alt="" />
                 </div>
               </div>
               <div
@@ -222,7 +222,7 @@ function DetailFlightPage(props) {
                 <Row>
                   <Col>
                     <div className=" mt-4 mb-1 mx-5">
-                      <img src={data?.photo} alt="" width={120} />
+                      <image src={data?.photo} alt="" width={120} />
                     </div>
                   </Col>
                   <Col>
@@ -266,7 +266,7 @@ function DetailFlightPage(props) {
                   </Col>
                   <Col xs={3}>
                     <div className="fly" style={{ marginLeft: "6rem" }}>
-                      <img src="/img/plan.png" alt="" height={20} />
+                      <image src="/img/plan.png" alt="" height={20} />
                     </div>
                   </Col>
                   <Col xs={6} md={4}>

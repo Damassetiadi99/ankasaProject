@@ -2,7 +2,7 @@
 import React from "react";
 // import Button from "../../base/button";
 import { useRouter } from "next/navigation";
-import styles from "./profile.module.css";
+import Styles from "./profile.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import Swal from "sweetalert2";
@@ -31,9 +31,9 @@ const profileCard = ({
     }
   };
   return (
-    <div className={styles.profileCard}>
-      <div className={styles.wraperProfile}>
-        <img src={profImg ? profImg : "https://static.vecteezy.com/system/resources/thumbnails/009/734/564/small/default-avatar-profile-icon-of-social-media-user-vector.jpg"} alt="" />
+    <div className={Styles.profileCard}>
+      <div className={Styles.wraperProfile}>
+        <image src={profImg ? profImg : "https://static.vecteezy.com/system/resources/thumbnails/009/734/564/small/default-avatar-profile-icon-of-social-media-user-vector.jpg"} alt="" />
       </div>
       <div>
         <Input
@@ -46,22 +46,22 @@ const profileCard = ({
           onChange={onChange}
         />
       </div>
-      <div className={styles.name}>{name ? name : ""}</div>
-      <div className={styles.address}>
+      <div className={Styles.name}>{name ? name : ""}</div>
+      <div className={Styles.address}>
         {city ? city : "Karawang"}, {address ? address : "Jawa Barat"}
       </div>
-      <div className={styles.titleCard}>
+      <div className={Styles.titleCard}>
         <div>Cards</div>
         <div>+ Add</div>
       </div>
-      <div className={styles.contentCard}>
+      <div className={Styles.contentCard}>
         <div>{noCard ? noCard : ""}</div>
-        <div className={styles.cardType}>
+        <div className={Styles.cardType}>
           <div>{typeCard ? typeCard : ""} Card</div>
           <div>$ {saldoCard ? saldoCard : ""}</div>
         </div>
       </div>
-      <div className={styles.menu}>
+      <div className={Styles.menu}>
         {/* profile */}
         <Link href="/users/profile">
           <div className="d-flex justify-content-between">
