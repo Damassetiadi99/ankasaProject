@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useReducer,useRef } from "react";
+import { useState, useEffect, useReducer } from "react";
 import { useRouter } from "next/navigation"; // Import useRouter
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
