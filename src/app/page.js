@@ -21,14 +21,14 @@ export default function Landing() {
         </h1>
         <p>and explore the world with us</p>
       </div>
-      <image src='/img/k8.png' alt="" className="img-fluid" />
+      <img src='/img/k8.png' alt="" className="img-fluid" />
     </div>
     <div className="col-lg-6 col-md-12 d-flex flex-column">
       <div className="d-flex justify-content-end">
-        <image src='/img/k7.png' alt="" className="img-fluid" />
+        <img src='/img/k7.png' alt="" className="img-fluid" />
       </div>
       <div className="d-flex justify-content-end">
-        <image src='/img/i3.png' alt="" className="p-lg-5 p-3 img-fluid" />
+        <img src='/img/i3.png' alt="" className="p-lg-5 p-3 img-fluid" />
       </div>
     </div>
   </div>
@@ -42,7 +42,7 @@ export default function Landing() {
     <div className="row mb-5 justify-content-between">
       <div className="col-lg-2 col-md-4 col-6 mb-5">
         <div className="card p-3 shadow p-2 mb-3 bg-body rounded">
-          <image
+          <img
             src='/img/k5.png'
             className="card-img-top img-fluid"
             alt=""
@@ -52,7 +52,7 @@ export default function Landing() {
             <div className="d-flex justify-content-between">
               <h3>Japan</h3>
               <button className="btn rounded-pill">
-                <image src='/img/i1.png' alt="" />
+                <img src='/img/i1.png' alt="" />
               </button>
             </div>
           </div>
@@ -60,7 +60,7 @@ export default function Landing() {
       </div>
       <div className="col-lg-2 col-md-4 col-6 mb-5">
         <div className="card p-3 shadow p-2 mb-3 bg-body rounded">
-          <image
+          <img
             src='/img/k9.png'
             className="img-fluid card-img-top"
             alt=""
@@ -70,7 +70,7 @@ export default function Landing() {
             <div className="d-flex justify-content-between">
               <h3>Japan</h3>
               <button className="btn rounded-pill">
-                <image src='/img/i1.png' alt="" />
+                <img src='/img/i1.png' alt="" />
               </button>
             </div>
           </div>
@@ -78,7 +78,7 @@ export default function Landing() {
       </div>
       <div className="col-lg-2 col-md-4 col-6 mb-5">
         <div className="card p-3 shadow p-2 mb-3 bg-body rounded">
-          <image
+          <img
             src='/img/k2.png'
             className="img-fluid card-img-top"
             alt=""
@@ -88,7 +88,7 @@ export default function Landing() {
             <div className="d-flex justify-content-between">
               <h3>Japan</h3>
               <button className="btn rounded-pill">
-                <image src='/img/i1.png' alt="" />
+                <img src='/img/i1.png' alt="" />
               </button>
             </div>
           </div>
@@ -96,7 +96,7 @@ export default function Landing() {
       </div>
       <div className="col-lg-2 col-md-4 col-6 mb-5">
         <div className="card p-3 shadow p-2 mb-3 bg-body rounded">
-          <image
+          <img
             src='/img/k9.png'
             className="img-fluid card-img-top"
             alt=""
@@ -106,7 +106,7 @@ export default function Landing() {
             <div className="d-flex justify-content-between">
               <h3>Japan</h3>
               <button className="btn rounded-pill">
-                <image src='/img/i1.png' alt="" />
+                <img src='/img/i1.png' alt="" />
               </button>
             </div>
           </div>
@@ -114,7 +114,7 @@ export default function Landing() {
       </div>
       <div className="col-lg-2 col-md-4 col-6 mb-5">
         <div className="card p-3 shadow p-2 mb-3 bg-body rounded">
-          <image
+          <img
             src='/img/k3.png'
             className="img-fluid card-img-top"
             alt=""
@@ -124,7 +124,7 @@ export default function Landing() {
             <div className="d-flex justify-content-between">
               <h3>Japan</h3>
               <button className="btn rounded-pill">
-                <image src='/img/i1.png' alt="" />
+                <img src='/img/i1.png' alt="" />
               </button>
             </div>
           </div>

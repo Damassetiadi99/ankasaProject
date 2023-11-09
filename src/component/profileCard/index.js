@@ -22,18 +22,18 @@ const ProfileCard = ({
   // const navigate = useNavigate();
   const router = useRouter()
   
-  const handleLogout = () => {
-    if (localStorage.getItem("access_token")) {
-      setTimeout(() => {
-        router.push("/");
-      }, 2000);
-      return localStorage.clear();
-    }
-  };
+  // const handleLogout = () => {
+  //   if (localStorage.getItem("access_token")) {
+  //     setTimeout(() => {
+  //       router.push("/");
+  //     }, 2000);
+  //     return localStorage.clear();
+  //   }
+  // };
   return (
     <div className={Styles.profileCard}>
       <div className={Styles.wraperProfile}>
-        <image src={profImg ? profImg : "https://static.vecteezy.com/system/resources/thumbnails/009/734/564/small/default-avatar-profile-icon-of-social-media-user-vector.jpg"} alt="" />
+        <img src={profImg ? profImg : "https://static.vecteezy.com/system/resources/thumbnails/009/734/564/small/default-avatar-profile-icon-of-social-media-user-vector.jpg"} alt="" />
       </div>
       <div>
         <Input
@@ -92,7 +92,7 @@ const ProfileCard = ({
           </button>
         </div>
         {/* logout */}
-        <div className="d-flex justify-content-between" onClick={() => { handleLogout(); router.push('/landing'); }}>
+        <div className="d-flex justify-content-between" onClick={() => { localStorage.clear(); router.push('/'); }}>
           <button className="btn">
             <Image src={Imag.u6} alt="" />
           </button>

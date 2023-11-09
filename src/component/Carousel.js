@@ -49,92 +49,91 @@ export default class Carousel extends Component {
                 <Slider {...settings}>
                     <div className="d-flex justify-content-center">
                         <div>
-                            <image src='/age/k11.png' alt='' className='img-fluid ' style={{ borderRadius: '100%', border: 'solid #fff', padding: '3%' }} />
+                            <img src='/img/k11.png' alt='' className='img-fluid ' style={{ borderRadius: '100%', border: 'solid #fff', padding: '3%' }} />
                             <h4 className='mt-3 text-center'>PARIS</h4>
                         </div>
                     </div>
                     <div className="d-flex justify-content-center">
                         <div>
-                            <image src='/img/k10.png' alt='' className='img-fluid ' style={{ borderRadius: '100%', border: 'solid #fff', padding: '3%' }} />
+                            <img src='/img/k10.png' alt='' className='img-fluid ' style={{ borderRadius: '100%', border: 'solid #fff', padding: '3%' }} />
                             <h4 className='mt-3 text-center'>PARIS</h4>
                         </div>
                     </div>
                     <div className="d-flex justify-content-center">
                         <div>
-                            <image src='/img/k1.png' alt='' className='img-fluid ' style={{ borderRadius: '100%', border: 'solid #fff', padding: '3%' }} />
+                            <img src='/img/k1.png' alt='' className='img-fluid ' style={{ borderRadius: '100%', border: 'solid #fff', padding: '3%' }} />
                             <h4 className='mt-3 text-center'>PARIS</h4>
                         </div>
                     </div>
                     <div className="d-flex justify-content-center">
                         <div>
-                            <image src='/img/k2.png' alt='' className='img-fluid ' style={{ borderRadius: '100%', border: 'solid #fff', padding: '3%' }} />
+                            <img src='/img/k2.png' alt='' className='img-fluid ' style={{ borderRadius: '100%', border: 'solid #fff', padding: '3%' }} />
                             <h4 className='mt-3 text-center'>PARIS</h4>
                         </div>
                     </div>
                     <div className="d-flex justify-content-center">
                         <div>
-                            <image src='/img/k3.png' alt='' className='img-fluid ' style={{ borderRadius: '100%', border: 'solid #fff', padding: '3%' }} />
+                            <img src='/img/k3.png' alt='' className='img-fluid ' style={{ borderRadius: '100%', border: 'solid #fff', padding: '3%' }} />
                             <h4 className='mt-3 text-center'>PARIS</h4>
                         </div>
                     </div>
                     <div className="d-flex justify-content-center">
                         <div>
-                            <image src='/img/k11.png' alt='' className='img-fluid ' style={{ borderRadius: '100%', border: 'solid #fff', padding: '3%' }} />
+                            <img src='/img/k11.png' alt='' className='img-fluid ' style={{ borderRadius: '100%', border: 'solid #fff', padding: '3%' }} />
                             <h4 className='mt-3 text-center'>PARIS</h4>
                         </div>
                     </div>
                     <div className="d-flex justify-content-center">
                         <div>
-                            <image src='/img/k10.png' alt='' className='img-fluid ' style={{ borderRadius: '100%', border: 'solid #fff', padding: '3%' }} />
+                            <img src='/img/k10.png' alt='' className='img-fluid ' style={{ borderRadius: '100%', border: 'solid #fff', padding: '3%' }} />
                             <h4 className='mt-3 text-center'>PARIS</h4>
                         </div>
                     </div>
                     <div className="d-flex justify-content-center">
                         <div>
-                            <image src='/img/k1.png' alt='' className='img-fluid ' style={{ borderRadius: '100%', border: 'solid #fff', padding: '3%' }} />
+                            <img src='/img/k1.png' alt='' className='img-fluid ' style={{ borderRadius: '100%', border: 'solid #fff', padding: '3%' }} />
                             <h4 className='mt-3 text-center'>PARIS</h4>
                         </div>
                     </div>
                     <div className="d-flex justify-content-center">
                         <div>
-                            <image src='/img/k2.png' alt='' className='img-fluid ' style={{ borderRadius: '100%', border: 'solid #fff', padding: '3%' }} />
+                            <img src='/img/k2.png' alt='' className='img-fluid ' style={{ borderRadius: '100%', border: 'solid #fff', padding: '3%' }} />
                             <h4 className='mt-3 text-center'>PARIS</h4>
                         </div>
                     </div>
                     <div className="d-flex justify-content-center">
                         <div>
-                            <image src='/img/k3.png' alt='' className='img-fluid ' style={{ borderRadius: '100%', border: 'solid #fff', padding: '3%' }} />
+                            <img src='/img/k3.png' alt='' className='img-fluid ' style={{ borderRadius: '100%', border: 'solid #fff', padding: '3%' }} />
                             <h4 className='mt-3 text-center'>PARIS</h4>
                         </div>
                     </div>
                     <div className="d-flex justify-content-center">
                         <div>
-                            <image src='/img/k11.png' alt='' className='img-fluid ' style={{ borderRadius: '100%', border: 'solid #fff', padding: '3%' }} />
+                            <img src='/img/k11.png' alt='' className='img-fluid ' style={{ borderRadius: '100%', border: 'solid #fff', padding: '3%' }} />
                             <h4 className='mt-3 text-center'>PARIS</h4>
                         </div>
                     </div>
                     <div className="d-flex justify-content-center">
                         <div>
-                            <image src='/img/k10.png'alt='' className='img-fluid ' style={{ borderRadius: '100%', border: 'solid #fff', padding: '3%' }} />
+                            <img src='/img/k10.png'alt='' className='img-fluid ' style={{ borderRadius: '100%', border: 'solid #fff', padding: '3%' }} />
                             <h4 className='mt-3 text-center'>PARIS</h4>
                         </div>
                     </div>
                     <div className="d-flex justify-content-center">
                         <div>
-                            <image src='/img/k1.png' alt='' className='img-fluid ' style={{ borderRadius: '100%', border: 'solid #fff', padding: '3%' }} />
+                            <img src='/img/k1.png' alt='' className='img-fluid ' style={{ borderRadius: '100%', border: 'solid #fff', padding: '3%' }} />
                             <h4 className='mt-3 text-center'>PARIS</h4>
                         </div>
                     </div>
                     <div className="d-flex justify-content-center">
                         <div>
-                            <image src='/img/k2.png' alt='' className='img-fluid ' style={{ borderRadius: '100%', border: 'solid #fff', padding: '3%' }} />
+                            <img src='/img/k2.png' alt='' className='img-fluid ' style={{ borderRadius: '100%', border: 'solid #fff', padding: '3%' }} />
                             <h4 className='mt-3 text-center'>PARIS</h4>
                         </div>
                     </div>
                     <div className="d-flex justify-content-center">
                         <div>
-                            <image
-                             src='/img/k3.png' alt='' className='img-fluid ' style={{ borderRadius: '100%', border: 'solid #fff', padding: '3%' }} />
+                            <img src='/img/k3.png' alt='' className='img-fluid ' style={{ borderRadius: '100%', border: 'solid #fff', padding: '3%' }} />
                             <h4 className='mt-3 text-center'>PARIS</h4>
                         </div>
                     </div>

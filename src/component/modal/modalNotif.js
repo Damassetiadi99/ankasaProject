@@ -52,7 +52,7 @@ function ModalNotif() {
     return (
         <>
             <Button variant="white" onClick={() => setModalShow(true)}>
-                 <image src='/img/gr2.png' alt=''/>
+                 <img src='/img/gr2.png' alt=''/>
              </Button>
 
             <MyVerticallyCenteredModal

@@ -13,7 +13,7 @@ class Footer extends Component {
               <div className="container-fluid">
                 <div className="row mt-5">
                   <div className=" container m-5 text-start">
-                    <image src='/img/fly.png' alt="" />
+                    <img src='/img/fly.png' alt="" />
                     <Button
                       className="text text-dark"
                       style={{
@@ -113,7 +113,7 @@ class Footer extends Component {
                 }}
                 variant="outline-light"
               >
-                <image src='/img/App.png' alt="" />
+                <img src='/img/App.png' alt="" />
               </Button>
             </div>
             <div className="container-fluid">
@@ -125,7 +125,7 @@ class Footer extends Component {
                 }}
                 variant="outline-light"
               >
-                <image src='/img/Play.png' alt="" />
+                <img src='/img/Play.png' alt="" />
               </Button>
             </div>
                 </div>
@@ -145,10 +145,10 @@ class Footer extends Component {
                   </Button>
                 </div>
                 <div style={{ marginLeft: "3rem" }}>
-                  <image src='/img/fb.png' alt="" className="sosmed" />
-                  <image src='/img/twit.png' alt="" className="sosmed" />
-                  <image src='/img/ig.png' alt="" className="sosmed" />
-                  <image src='/img/yt.png' alt="" className="sosmed" />
+                  <img src='/img/fb.png' alt="" className="sosmed" />
+                  <img src='/img/twit.png' alt="" className="sosmed" />
+                  <img src='/img/ig.png' alt="" className="sosmed" />
+                  <img src='/img/yt.png' alt="" className="sosmed" />
                 </div>
               </div>
             </div>

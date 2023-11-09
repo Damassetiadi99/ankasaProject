@@ -37,6 +37,7 @@ export default function Login() {
   
         // Store the token in local storage
         localStorage.setItem('token', authToken);
+        localStorage.setItem('name', data.data.name);
   
         Swal.fire({
           icon: "success",
@@ -65,12 +66,12 @@ export default function Login() {
   <div className="row" style={{ height: '100vh' }}>
     <div className="col-md-6 bg-primary d-flex align-items-center justify-content-center">
       {/* Gambar atau konten di sisi kiri */}
-      <image src="/gambar-login.png" alt="Gambar Login" className="image-fluid" />
+      <img src="/gambar-login.png" alt="Gambar Login" className="img-fluid" />
     </div>
     <div className="col-md-6 d-flex flex-column align-items-center">
       {/* Form login di sisi kanan */}
       <div className="pt-5 pb-5 mb-5 mb-md-0 col-md-5 ml-auto">
-        <image src="/icon auth.png" alt="Gambar Login" className="img-fluid" />
+        <img src="/icon auth.png" alt="Gambar Login" className="img-fluid" />
       </div>
       <h2 className="col-md-5 ml-auto mb-5 fw-bold">Login</h2>
       <form onSubmit={handleLogin}>

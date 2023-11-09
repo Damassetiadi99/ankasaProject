@@ -6,6 +6,7 @@ import "./style.css";
 import Link from "next/link";
 // import MyModalTicket from "@/component/modal/modalChat";
 import MyVerticallyCenteredModal from "@/component/modal/modalNotif";
+import { useEffect, useState } from "react";
 // import MydModalWithGrid from "@/component/modal/modalTiket";
 // import { useEffect } from "react";
 // import { useSelector, useDispatch } from "react-redux";
@@ -14,7 +15,12 @@ import MyVerticallyCenteredModal from "@/component/modal/modalNotif";
 function NavbarComponent() {
   
   // { search, submitSearch, id }
-  const token = localStorage.getItem("Ankasa");
+  // const token = localStorage.getItem("Ankasa");
+  const [token, setToken] = useState()
+  useEffect(() => {
+    const storedToken = localStorage.getItem("token")
+    setToken(storedToken)
+  }, [])
   // const { profile } = useSelector((state) => state.profile);
 
   // const dispatch = useDispatch();
@@ -29,7 +35,7 @@ function NavbarComponent() {
     <div className=" bg-white">
       <div className="row d-flex justify-content-between">
         <div className="col-lg-2 px-3 d-flex align-content-center flex-wrap justify-content-start">
-          <image
+          <img
             src='/img/fly.png'
             alt="logo"
             style={{ width: "30px", marginRight: "10px" }}
@@ -64,8 +70,8 @@ function NavbarComponent() {
                   className="button is-info form-control-plaintext"
                   style={{ borderRadius: "10px" }}
                 >
-                  <image
-                                      src="https://www.citypng.com/public/uploads/preview/download-blue-search-icon-button-png-11640084027s0fkuhz2lb.png"
+                  <img
+                    src="https://www.citypng.com/public/uploads/preview/download-blue-search-icon-button-png-11640084027s0fkuhz2lb.png"
                     alt="asas"
                     style={{
                       backgroundColor: "white",
@@ -107,9 +113,9 @@ function NavbarComponent() {
                   {/* <MyModalTicket /> */}
                   <MyVerticallyCenteredModal />
                   <Button variant="white" style={{ width: "4rem" }}>
-                    <Link href="/profile">
-                      <image
-                        src={profile.photo}
+                    <Link href="/Profile">
+                      <img
+                        src="https://res.cloudinary.com/dafjb9vn7/image/upload/v1693639658/profile_cmqdrx.png"
                         alt=""
                         style={{
                           verticalAlign: "middle",

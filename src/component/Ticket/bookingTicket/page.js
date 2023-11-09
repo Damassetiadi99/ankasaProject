@@ -6,47 +6,83 @@ import Link from "next/link";
 
 function CardBookingTiketStatus() {
   const [Flight, setFlight] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
+  const [user, setUser] = useState([]);
 
   useEffect(() => {
-    const fetchBookingData = async () => {
-      try {
-        const token = localStorage.getItem("token");
-
-        if (!token) {
-          console.error("Token not found.");
-          setIsLoading(false);
-          return;
-        }
-
-        const response = await fetch(
-          `https://easy-lime-seal-toga.cyclic.app/booking/tickets`,
-          {
-            method: "GET",
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          }
-        );
-
-        if (!response.ok) {
-          console.error("Error fetching booking data:", response.statusText);
-          setIsLoading(false);
-          return;
-        }
-
-        const data = await response.json();
-        console.log("Booking data:", data);
-        setFlight(data?.data?.result);
-        setIsLoading(false);
-      } catch (error) {
-        console.error("Error fetching booking data:", error);
-        setIsLoading(false);
-      }
-    };
-
-    fetchBookingData();
+    userData()
+      .then((data) => {
+        console.log("Data fetched:", data);
+        setUser(data.data.result);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
   }, []);
+
+  const userData = async () => {
+    try {
+      const response = await fetch(
+        `https://easy-lime-seal-toga.cyclic.app/booking/tickets/`,
+        {
+          method: "GET",
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
+  // useEffect(() => {
+  //   const fetchBookingData = async () => {
+  //     try {
+  //       const token = localStorage.getItem("token");
+
+  //       if (!token) {
+  //         console.error("Token not found.");
+  //         setIsLoading(false);
+  //         return;
+  //       }
+
+  //       const response = await fetch(
+  //         `https://easy-lime-seal-toga.cyclic.app/booking/tickets`,
+  //         {
+  //           method: "GET",
+  //           headers: {
+  //             Authorization: `Bearer ${token}`,
+  //           },
+  //         }
+  //       );
+
+  //       if (!response.ok) {
+  //         console.error("Error fetching booking data:", response.statusText);
+  //         setIsLoading(false);
+  //         return;
+  //       }
+
+  //       const data = await response.json();
+  //       console.log("Booking data:", data);
+  //       setFlight(data?.data?.result);
+  //       setIsLoading(false);
+  //     } catch (error) {
+  //       console.error("Error fetching booking data:", error);
+  //       setIsLoading(false);
+  //     }
+  //   };
+
+  //   fetchBookingData();
+  // }, []);
 
   const formatDate = (date) => {
     const options = {
@@ -72,7 +108,7 @@ function CardBookingTiketStatus() {
     </div>
   </div>
   <div className="pt-5">
-    {Flight.map((booking, index) => (
+    {user.map((booking, index) => (
       <div className="card d-flex flex-column flex-md-row" key={index}>
         <div className="card-header">
           <h6 className="date fs-6 p-3">
@@ -80,7 +116,7 @@ function CardBookingTiketStatus() {
           </h6>
           <div className="d-flex gap-4 px-3">
             <h3 className="fw-bolder">({booking.ticket.from?.code})</h3>
-            <image src="/img/plan.png" alt="" height={20} />
+            <img src="/img/plan.png" alt="" height={20} />
             <h3 className="fw-bolder">({booking.ticket.to?.code})</h3>
           </div>
           <p className="px-3" style={{ color: "#979797" }}>

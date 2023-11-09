@@ -2,6 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { useRouter, useParams } from 'next/navigation';
+import Image from 'next/image';
 import { useState } from 'react';
 
 const CardPayment = () => {
@@ -55,10 +56,10 @@ const CardPayment = () => {
                   <label className="bg-light">Credit Card</label>
                 </div>
                 <div className="col-md-6 d-flex flex-column justify-content-start align-items-end gap-3">
-                  <image src="/paypal.png" alt="Paypal" className="img-fluid mb-2" style={{ width: '20px', height: '20px' }} />
+                  <img src="/paypal.png" alt="Paypal" className="img-fluid mb-2" style={{ width: '20px', height: '20px' }} />
                   <div className="d-flex gap-2">
-                    <image src="/MasterCard.png" alt="Master Card" className="img-fluid mb-2" style={{ width: '20px', height: '20px' }} />
-                    <image src="/Visa.png" alt="Visa" className="img-fluid mb-2" style={{ width: '20px', height: '20px' }} />
+                    <img src="/MasterCard.png" alt="Master Card" className="img-fluid mb-2" style={{ width: '20px', height: '20px' }} />
+                    <img src="/Visa.png" alt="Visa" className="img-fluid mb-2" style={{ width: '20px', height: '20px' }} />
                   </div>
                 </div>
               </div>
@@ -68,7 +69,7 @@ const CardPayment = () => {
                 <label className="fw-bold">Card Number</label>
 
                 <div className="d-flex justify-content-start">
-                  <image src="/LogoCard.jpeg" alt="Visa" className="img-fluid" style={{ width: '40px', height: '40px' }} />
+                  <img src="/LogoCard.jpeg" alt="Visa" className="img-fluid" style={{ width: '40px', height: '40px' }} />
                   <input type="text" className="form-control" placeholder=" 0000 0000 0000 0000" />
                 </div>
 

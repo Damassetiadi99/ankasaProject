@@ -26,7 +26,7 @@ function MydModalWithGrid(props) {
                 </div>
                 <div className="p-4">
                   <button className="btn btn-white">
-                    <image src='/img/gr6.png' alt="" />
+                    <img src='/img/gr6.png' alt="" />
                   </button>
                 </div>
                 <div className="text-end">
@@ -39,14 +39,14 @@ function MydModalWithGrid(props) {
           </div>
           <dv className="d-flex justify-content-between">
             <button type="button" className="col-5 btn btn-primary">
-              <image src='/img/gr3.png' alt="" />
+              <img src='/img/gr3.png' alt="" />
             </button>
             <button
               style={{ backgroundColor: "#F0F0F0", marginLeft: "" }}
               type="button"
               className="col-6  btn"
             >
-              <image src='/img/gr.png' alt="" />
+              <img src='/img/gr.png' alt="" />
             </button>
           </dv>
           <p className="mt-2" style={{ color: "#6B6B6B" }}>
@@ -131,7 +131,7 @@ function MydModalWithGrid(props) {
             >
               <b style={{ color: "white" }}>SEARCH FLIGHT</b>
 
-              <image className="text-white text-end" src='/img/gr8.png' alt="" />
+              <img className="text-white text-end" src='/img/gr8.png' alt="" />
             </Link>
           </button>
         </Container>

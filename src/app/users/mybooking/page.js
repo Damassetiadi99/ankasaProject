@@ -10,41 +10,48 @@ import { useRouter } from 'next/navigation';
 
 export default function Mybooking () {
     const [profileData, setProfileData] = useState({});
-    const [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(false);
     const router = useRouter()
     
 
-useEffect(() => {
-    const token = localStorage.getItem("token");
+// useEffect(() => {
+//     if (typeof window !== "undefined") {
+//     const token = localStorage.getItem("token");
 
-    if (token) {
-      fetch("https://easy-lime-seal-toga.cyclic.app//users/detail", {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      })
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error("Request failed");
-          }
-          return response.json();
-        })
-        .then((data) => {
-          setProfileData(data);
-          setIsLoading(false);
-        })
-        .catch((error) => {
-          console.error("Error fetching profile data:", error);
-          setIsLoading(false);
-        });
-    } else {
-      // Handle jika token tidak tersedia
-      console.error("Token not found in localStorage");
-      router.push("/landing");
-      setIsLoading(false);
-    }
-  }, []);
+//     if (token) {
+//       fetch("https://easy-lime-seal-toga.cyclic.app//users/detail", {
+//         headers: {
+//           Authorization: `Bearer ${token}`,
+//         },
+//       })
+//         .then((response) => {
+//           if (!response.ok) {
+//             throw new Error("Request failed");
+//           }
+//           return response.json();
+//         })
+//         .then((data) => {
+//           setProfileData(data);
+//           console.log(data)
+//           setIsLoading(false);
+//         })
+//         .catch((error) => {
+//           console.error("Error fetching profile data:", error);
+//           setIsLoading(false);
+//         });
+//     } else {
+//       // Handle jika token tidak tersedia
+//       console.error("Token not found in localStorage");
+//       router.push("/landing");
+//       setIsLoading(false);
+//     }
+//   }}, []);
 
+const [name, setName] = useState('')
+  useEffect(() => {
+    const storedName = localStorage.getItem('name')
+    setName(storedName)
+  }, [])
 
     return (
         <div className='container-fluid'>
@@ -54,7 +61,7 @@ useEffect(() => {
             ) : (
                 <div className='d-flex p-3 gap-5' style={{backgroundColor: '#F5F6FA'}}>
                     <ProfileCard
-                        name={profileData?.data?.name}
+                        name={name}
                         city={profileData?.data?.city}
                         address={profileData?.address}
                         profImg={profileData?.photo}

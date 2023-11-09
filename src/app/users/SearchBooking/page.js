@@ -5,6 +5,7 @@ import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
 import axios from "axios";
 import Swal from "sweetalert2";
+import NavbarComponent from "@/component/header/index";
 import Footer from "@/component/footer/footer";
 import Ticket from "@/component/Ticket/index";
 import HeaderSearch from "@/component/header/search";
@@ -16,8 +17,15 @@ const SearchBooking = (props) => {
   const [data, setData] = useState([]);
   const [selected, setSelected] = useState(null);
   const router = useRouter(); // Initialize useRouter
-  const token = localStorage.getItem("Ankasa");
+  // const token = localStorage.getItem("Ankasa");
   const [search, setSearch] = useState("");
+
+  const [token, setToken] = useState()
+  useEffect(() => {
+    const storedToken = localStorage.getItem("Ankasa")
+    setToken(storedToken)
+  }, [])
+
 
 
   const Searching = (e) => {
@@ -137,7 +145,7 @@ console.log(selectedData())
       <div className=" bg-white">
       <div className="row d-flex justify-content-between">
         <div className="col-lg-2 px-3 d-flex align-content-center flex-wrap justify-content-start">
-          <image
+          <img
             src='/img/fly.png'
             alt="logo"
             style={{ width: "30px", marginRight: "10px" }}
@@ -172,11 +180,11 @@ console.log(selectedData())
                   className="button is-info form-control-plaintext"
                   style={{ borderRadius: "10px" }}
                 >
-                  <image
+                  <img
                     src="https://www.citypng.com/public/uploads/preview/download-blue-search-icon-button-png-11640084027s0fkuhz2lb.png"
                     alt="asas"
                     style={{
-                      backgroundColor: "blue",
+                      backgroundColor: "white",
                       width: "20px",
                     }}
                   />
@@ -212,9 +220,11 @@ console.log(selectedData())
               </Link>
               {token ? (
                 <div className=" px-lg-4 d-flex justify-content-end">
+                  {/* <MyModalTicket /> */}
+                  <MyVerticallyCenteredModal />
                   <Button variant="white" style={{ width: "4rem" }}>
                     <Link href="/profile">
-                      <image
+                      <img
                         src={profile.photo}
                         alt=""
                         style={{
