@@ -9,7 +9,7 @@
   <p align="center">
     <br/>
     <br/>
-    <a href="https://github.com/myfadil/Ankasa_Ticketing_Web_App"><strong>Explore the docs »</strong></a>
+    <a href="https://https://github.com/Damassetiadi99/ankasaProject"><strong>Explore the docs »</strong></a>
     <br/>
     <br/>
     <a href="https://ankasa-project-ten.vercel.app/">View Demo</a>
@@ -61,7 +61,7 @@ Install Ankasa Web with npm :
 - Go To Folder Repo
 
 ```
-  cd AnkasaProject
+  cd ankasaProject
 ```
 
 - Install Module
