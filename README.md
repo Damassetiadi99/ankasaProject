@@ -118,8 +118,8 @@ Contributions are what make the open-source community such an amazing place to l
 
 ## Contact
 
-- Email : [`damassetiadi`](mailto:damassetiadi999@gmail.com)
+- Email : [`damassetiadi999@gmail.com`](mailto:damassetiadi999@gmail.com)
 
-- LinkedIn : [`Damas Setiadi`](https://www.linkedin.com/in/damas-setiadi-sukardi/)
+- LinkedIn : [`Damas Setiadi Sukardi`](https://www.linkedin.com/in/damas-setiadi-sukardi/)
 
-- GitHub : [`Damas Setiadi`](https://github.com/Damassetiadi99/)
+- GitHub : [`Damassetiadi99`](https://github.com/Damassetiadi99/)
