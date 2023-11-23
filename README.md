@@ -9,7 +9,7 @@
   <p align="center">
     <br/>
     <br/>
-    <a href="https://https://github.com/Damassetiadi99/ankasaProject"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Damassetiadi99/ankasaProject"><strong>Explore the docs »</strong></a>
     <br/>
     <br/>
     <a href="https://ankasa-project-ten.vercel.app/">View Demo</a>
